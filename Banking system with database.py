@@ -21,11 +21,11 @@ def register():
     Label(register_screen, text="").pack()
     username_lable = Label(register_screen, text="Username * ")
 
-    # username_label.grid(register_screen,row=0,column=0)
+
 
     username_lable.pack()
     username_entry = Entry(register_screen, textvariable=username)
-    # username_entry.grid(register_screen,row=0,column=1)
+   
     username_entry.pack()
     contactnumber_lable = Label(register_screen, text="contact number * ")
     contactnumber_lable.pack()
@@ -53,7 +53,7 @@ def register():
     Button(register_screen, text="Register", width=10, height=1, bg="red", command=register_user).pack()
 
 
-# Designing window for login
+
 
 def login():
     global login_screen
@@ -83,7 +83,6 @@ def login():
     Button(login_screen, text="Login", width=10, height=1, command=login_verify).pack()
 
 
-# Implementing event on register button
 
 def register_user():
     username_info = username.get()
@@ -100,7 +99,6 @@ def register_user():
     Label(register_screen, text="Registration Success", fg="green", font=("calibri", 11)).pack()
 
 
-# Implementing event on login button
 
 def login_verify():
     username1 = username_verify.get()
@@ -122,7 +120,6 @@ def login_verify():
         user_not_found()
 
 
-# Designing popup for login success
 
 def login_sucess():
     global login_success_screen
@@ -134,7 +131,7 @@ def login_sucess():
     Button(login_success_screen, text="OK", command=menu).pack()
 
 
-# Designing popup for login invalid password
+
 
 def password_not_recognised():
     global password_not_recog_screen
@@ -145,7 +142,6 @@ def password_not_recognised():
     Button(password_not_recog_screen, text="OK", command=delete_password_not_recognised).pack()
 
 
-# Designing popup for user not found
 
 def user_not_found():
     global user_not_found_screen
@@ -156,7 +152,7 @@ def user_not_found():
     Button(user_not_found_screen, text="OK", command=delete_user_not_found_screen).pack()
 
 
-# Deleting popups
+
 
 def delete_login_success():
     login_success_screen.destroy()
@@ -170,7 +166,7 @@ def delete_user_not_found_screen():
     user_not_found_screen.destroy()
 
 
-# Designing Main(first) window
+
 def deposit():
     global n1
     global a1
@@ -203,7 +199,7 @@ def deposit():
     am1 = Entry(deposit_screen)
     am1.pack()
 
-    # account_lable = Label(deposit_screen, text="Account number * ")
+   
     Label(deposit_screen, text="").pack()
     Button(deposit_screen, text="deposit", width=10, height=1, bg="red", command=save).pack()
     Label(deposit_screen, text="").pack()
